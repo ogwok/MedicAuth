@@ -13,6 +13,20 @@ const Home = document.querySelector(".content");
 const Menu = document.querySelector(".content-menu");
 const toCounterfeit = document.querySelector(".to-counterfeit");
 const Counterfeit = document.querySelector(".content-counterfeit");
+const toMenu = document.querySelector(".to-menu");
+const toMenu2 = document.querySelector(".to-menu2");
+
+//navigate to main Menu from report counterfeit page
+toMenu.addEventListener("click", () => {
+  Counterfeit.classList.remove("active");
+  Menu.classList.add("active");
+});
+
+//navigate to main Menu from main auth page
+toMenu2.addEventListener("click", () => {
+  Home.classList.remove("open");
+  Menu.classList.add("active");
+});
 
 //navigate to the home page
 toHome.addEventListener("click", () => {
