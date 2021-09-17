@@ -8,6 +8,16 @@ if ("serviceWorker" in navigator) {
 const requestModal = document.querySelector(".new-request");
 const requestLink = document.querySelector(".add-request");
 const requestForm = document.querySelector(".new-request form");
+const toHome = document.querySelector(".to-home");
+const Home = document.querySelector(".content");
+const Menu = document.querySelector(".content-menu");
+
+//close content Menu
+toHome.addEventListener("click", () => {
+  Menu.classList.remove("active");
+  Home.classList.add("open");
+  console.log("to home clicked");
+});
 
 // open request modal
 requestLink.addEventListener("click", () => {

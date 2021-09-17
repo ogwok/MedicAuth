@@ -29,12 +29,12 @@ header {
 }
 header a {
   margin-left: 10px;
-  border-bottom: 2px solid #B01712;
+  border-bottom: 2px solid #b01712;
   padding: 4px;
   cursor: pointer;
 }
 header a:hover {
-  background: #B01712;
+  background: #b01712;
   color: black;
 }
 
@@ -42,11 +42,28 @@ header a:hover {
 .content {
   max-width: 800px;
   margin: 40px auto 0;
+  display: none;
 }
+.content.open {
+  display: block;
+}
+.content-menu {
+  max-width: 800px;
+  margin: 40px auto 0;
+}
+.content-menu {
+  display: none;
+}
+.content-menu.active {
+  display: block;
+}
+/* .content-menu.open {
+  display: block;
+} */
+
 h1.title {
   margin-left: 10px;
 }
-
 
 /* request list styles */
 .request-list li {
@@ -70,7 +87,7 @@ h1.title {
 }
 .request-list .upvote:active {
   color: black;
-  background: #B01712;
+  background: #b01712;
 }
 
 /* modal styles */
@@ -102,7 +119,6 @@ input {
   padding: 8px 2px;
   border-width: 0 0 2px 0;
   width: 100%;
-  
 }
 /* input[type=text] {
   width: 100%;
@@ -112,17 +128,16 @@ input {
 } */
 
 button {
-  
   margin-top: 10px;
   padding: 8px 12px;
-  background: #B01712;
+  background: #b01712;
   border: 0;
   font-weight: bold;
   font-family: inherit;
   cursor: pointer;
   color: #ffffff;
 }
-button.check-med{
+button.check-med {
   margin-left: 10px;
 }
 
