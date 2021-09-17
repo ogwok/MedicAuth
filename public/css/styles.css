@@ -57,9 +57,17 @@ header a:hover {
 .content-menu.active {
   display: block;
 }
-/* .content-menu.open {
+
+.content-counterfeit {
+  max-width: 800px;
+  margin: 40px auto 0;
+}
+.content-counterfeit {
+  display: none;
+}
+.content-counterfeit.active {
   display: block;
-} */
+}
 
 h1.title {
   margin-left: 10px;

@@ -11,12 +11,19 @@ const requestForm = document.querySelector(".new-request form");
 const toHome = document.querySelector(".to-home");
 const Home = document.querySelector(".content");
 const Menu = document.querySelector(".content-menu");
+const toCounterfeit = document.querySelector(".to-counterfeit");
+const Counterfeit = document.querySelector(".content-counterfeit");
 
-//close content Menu
+//navigate to the home page
 toHome.addEventListener("click", () => {
   Menu.classList.remove("active");
   Home.classList.add("open");
-  console.log("to home clicked");
+});
+
+//navigate to the counterfeit page
+toCounterfeit.addEventListener("click", () => {
+  Menu.classList.remove("active");
+  Counterfeit.classList.add("active");
 });
 
 // open request modal
