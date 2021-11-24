@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "medicalauthentication"
+  },
+  "targets": {
+    "medicalauthentication": {
+      "hosting": {
+        "main": [
+          "medicalauthentication"
+        ],
+        "admin": [
+          "medic-auth-admin"
+        ]
+      }
+    }
   }
 }
