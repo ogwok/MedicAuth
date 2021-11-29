@@ -16,7 +16,7 @@ exports.userDeleted = functions.auth.user().onDelete((user) => {
   return doc.delete();
 });
 
-// http callable function (adding a report)
+// http callable function (to add medicine to database)
 exports.addRequest = functions.https.onCall((data, context) => {
   if (!context.auth) {
     throw new functions.https.HttpsError(
@@ -24,22 +24,65 @@ exports.addRequest = functions.https.onCall((data, context) => {
         "only authenticated users can add requests"
     );
   }
-  if (data.report.length > 3000) {
+  if (data.batch.length > 15) {
     throw new functions.https.HttpsError(
         "invalid-argument",
-        "request must be no more than 3000 characters long"
+        "Batch must be no more than 15 characters long"
     );
   } 
   return admin.firestore().collection("reports").add({
-    name: data.name,
-    age: data.age,
-    location: data.location,
-    gender: data.gender,
-    report: data.report,
+    batchno: data.batch,
+    medname: data.name,
+    mufdate: data.mufdate,
+    expdate: data.expdate,
+    
   });
 });
 
-// update  records function
+// http callable function (to add report about fake products to database)
+exports.addComplaint = functions.https.onCall((data, context) => {
+  if (!context.auth) {
+    throw new functions.https.HttpsError(
+        "unauthenticated",
+        "only authenticated users can add requests"
+    );
+  }
+  if (data.phone.length > 10) {
+    throw new functions.https.HttpsError(
+        "invalid-argument",
+        "Phone number must be no more than 10 characters long"
+    );
+  } 
+  return admin.firestore().collection("complaints").add({
+    fname: data.fname,
+    location: data.location,
+    phone: data.phone,
+    medName: data.medName,
+    details: data.details,
+  });
+});
+
+// http callable function (to add pharmacies to database)
+exports.addPharma = functions.https.onCall((data, context) => {
+  if (!context.auth) {
+    throw new functions.https.HttpsError(
+        "unauthenticated",
+        "only authenticated users can add requests"
+    );
+  }
+  if (data.regno.length > 10) {
+    throw new functions.https.HttpsError(
+        "invalid-argument",
+        "Registration number must be no more than 10 characters long"
+    );
+  } 
+  return admin.firestore().collection("pharmacies").add({
+    pharmaname: data.name,
+    pharmaregno: data.regno,
+    
+  });
+});
+// update medical database records function
 exports.updateRecord = functions.https.onCall((data, context) => {
   if (!context.auth) {
     throw new functions.https.HttpsError(
@@ -55,7 +98,7 @@ exports.updateRecord = functions.https.onCall((data, context) => {
   
 })
 
-// delete records function
+// delete medical database records function
 exports.deleteRecord = functions.https.onCall((data, context) => {
   if (!context.auth) {
     throw new functions.https.HttpsError(

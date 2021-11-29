@@ -1,3 +1,4 @@
+const complaintForm = document.querySelector(".old-request form");
 const checklink = document.querySelector(".new-check form");
 // const formElem = document.querySelector(".new-check form")
 checklink.addEventListener("submit", (e) => {
@@ -33,4 +34,26 @@ checklink.addEventListener("formdata", (e) => {
       document.querySelector(".content ul").innerHTML = html;
     }
   });
+});
+
+// add a new request
+complaintForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  console.log("sending form request");
+  const addRequest = firebase.functions().httpsCallable("addComplaint");
+  
+  addRequest({
+    fname: complaintForm.fname.value,
+    location: complaintForm.location.value,
+    phone: complaintForm.phone.value,
+    medName: complaintForm.medName.value,
+    details: complaintForm.details.value,
+    
+  })
+    .then(() => {
+      requestForm.reset();
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 });

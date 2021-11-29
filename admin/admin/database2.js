@@ -1,9 +1,9 @@
-const requestForm = document.querySelector(".old-request form");
-
+const pharmForm = document.querySelector(".pharm-form form");
 var app = new Vue({
     el: '#app',
     data: {
-      reports: []
+      reports: [],
+      complaints: [],
     },
     methods: {
       updateRecord(id){
@@ -23,7 +23,6 @@ var app = new Vue({
     },
     mounted(){
         const ref = firebase.firestore().collection('reports');
-
         ref.onSnapshot(snapshot => {
             let requests = [];
             snapshot.forEach(doc => {
@@ -32,24 +31,32 @@ var app = new Vue({
             this.reports = requests;
             console.log(requests);
         })
+
+        const refComplaints = firebase.firestore().collection('complaints');
+        refComplaints.onSnapshot(snapshot => {
+            let userComplaints = [];
+            snapshot.forEach(doc => {
+              userComplaints.push({...doc.data(), id: doc.id})
+            })
+            this.complaints = userComplaints;
+            console.log(userComplaints);
+        })
        
     }
   })
 
 
-
-// add a new request
-requestForm.addEventListener("submit", (e) => {
+// add a new pharmarcy to the database
+pharmForm.addEventListener("submit", (e) => {
   e.preventDefault();
-
-  const addRequest = firebase.functions().httpsCallable("addRequest");
+  console.log("clicked!!");
+  const addRequest = firebase.functions().httpsCallable("addPharma");
   
   addRequest({
-    name: requestForm.fname.value,
-    age: requestForm.age.value,
-    location: requestForm.location.value,
-    gender: requestForm.gender.value,
-    report: requestForm.report.value,
+    name: pharmForm.name.value,
+    regno: pharmForm.regno.value,
+    
+    
   })
     .then(() => {
       requestForm.reset();
@@ -59,8 +66,3 @@ requestForm.addEventListener("submit", (e) => {
     });
 });
 
-// let html = ``;
-// requests.forEach(request => {
-//     html += `<li>${request.text}</li>`
-// });
-// document.querySelector('ul').innerHTML = html;

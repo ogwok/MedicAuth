@@ -61,11 +61,8 @@ signOut.addEventListener("click", () => {
 // auth listener
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
-    authWrapper.classList.remove("open");
-    authModals.forEach((modal) => modal.classList.remove("active"));
+      window.location = `${window.location}admin/index.html`
   } else {
-    // window.location = `${window.location}client/index.html`
-    authWrapper.classList.add("open");
-    authModals[0].classList.add("active");
+    
   }
 });

@@ -3,9 +3,7 @@
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"
   },
-  "hosting":[ 
-    {
-    "target": "main",
+  "hosting": {
     "public": "public",
     "ignore": [
       "firebase.json",
@@ -13,16 +11,6 @@
       "**/node_modules/**"
     ]
   },
-  {
-    "target": "admin",
-    "public": "admin",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
-  }
-],
   "functions": {
     "source": "functions"
   }
