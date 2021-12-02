@@ -5,11 +5,14 @@
   "targets": {
     "medicalauthentication": {
       "hosting": {
-        "main": [
-          "medicalauthentication"
-        ],
         "admin": [
           "medic-auth-admin"
+        ],
+        "public": [
+          "medicalauthentication"
+        ],
+        "pharmacies": [
+          "medic-auth-pharmacies"
         ]
       }
     }

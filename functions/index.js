@@ -35,9 +35,34 @@ exports.addRequest = functions.https.onCall((data, context) => {
     medname: data.name,
     mufdate: data.mufdate,
     expdate: data.expdate,
+    permsission: "admin",
+  });
+});
+
+// http callable function (to add medicine to database by pharmacies)
+exports.addPharmDrug = functions.https.onCall((data, context) => {
+  if (!context.auth) {
+    throw new functions.https.HttpsError(
+        "unauthenticated",
+        "only authenticated users can add requests"
+    );
+  }
+  if (data.batch.length > 15) {
+    throw new functions.https.HttpsError(
+        "invalid-argument",
+        "Batch must be no more than 15 characters long"
+    );
+  } 
+  return admin.firestore().collection("reports").add({
+    batchno: data.batch,
+    medname: data.name,
+    mufdate: data.mufdate,
+    expdate: data.expdate,
+    permsission: "pharmacies",
     
   });
 });
+
 
 // http callable function (to add report about fake products to database)
 exports.addComplaint = functions.https.onCall((data, context) => {

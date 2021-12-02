@@ -1,5 +1,5 @@
 const requestForm = document.querySelector(".medic-form form");
-const pharmForm = document.querySelector(".pharm-form form");
+
 var app = new Vue({
     el: '#app',
     data: {
@@ -23,8 +23,8 @@ var app = new Vue({
        }
     },
     mounted(){
-        const ref = firebase.firestore().collection('reports');
-        // ref = queryRef.where("medname", "==", "Panadol");
+        const queryRef = firebase.firestore().collection('reports');
+        ref = queryRef.where("permsission", "==", "pharmacies");
         ref.onSnapshot(snapshot => {
             let requests = [];
             snapshot.forEach(doc => {
@@ -47,13 +47,11 @@ var app = new Vue({
     }
   })
 
-
-
 // add a new drug to the database
 requestForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  console.log("drug clicked");
-  const addRequest = firebase.functions().httpsCallable("addRequest");
+  console.log("drug clicked addPharmDrug");
+  const addRequest = firebase.functions().httpsCallable("addPharmDrug");
   
   addRequest({
     batch: requestForm.batchno.value,
@@ -70,25 +68,7 @@ requestForm.addEventListener("submit", (e) => {
     });
 });
 
-// add a new pharmarcy to the database
-pharmForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  console.log("clicked!!");
-  const addRequest = firebase.functions().httpsCallable("addRequest");
-  
-  addRequest({
-    name: pharmForm.name.value,
-    regno: pharmForm.regno.value,
-    
-    
-  })
-    .then(() => {
-      requestForm.reset();
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-});
+
 
 // let html = ``;
 // requests.forEach(request => {

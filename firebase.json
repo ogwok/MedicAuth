@@ -3,7 +3,8 @@
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"
   },
-  "hosting": {
+  "hosting": [{
+    "target": "public",
     "public": "public",
     "ignore": [
       "firebase.json",
@@ -11,6 +12,24 @@
       "**/node_modules/**"
     ]
   },
+  {
+    "target": "admin",
+    "public": "admin",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  {
+    "target": "pharmacies",
+    "public": "pharmacies",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }],
   "functions": {
     "source": "functions"
   }

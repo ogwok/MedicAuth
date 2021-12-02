@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title>Medical Database</title>
+    <title>Help</title>
     
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    
+    <meta name="description" content="Portal - Bootstrap 5 Admin Dashboard Template For Developers">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
     <link rel="shortcut icon" href="favicon.ico"> 
     
     <!-- FontAwesome JS-->
@@ -31,13 +32,10 @@
 						    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg>
 					    </a>
 				    </div><!--//col-->
-		            <div class="search-mobile-trigger d-sm-none col">
-			            <i class="search-mobile-trigger-icon fas fa-search"></i>
-			        </div><!--//col-->
-		           
+		            
 		            
 		            <div class="app-utilities col-auto">
-			            
+			         
 			            
 			            <div class="app-utility-item app-user-dropdown dropdown">
 				            <a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><img src="../assets/images/user.png" alt="user profile"></a>
@@ -45,7 +43,7 @@
 								
 								<li><a class="dropdown-item" href="login.html">Log Out</a></li>
 							</ul>
-			            </div><!--//app-user-dropdown--> 
+			            </div><!--//app-user-dropdown-->  
 		            </div><!--//app-utilities-->
 		        </div><!--//row-->
 	            </div><!--//app-header-content-->
@@ -73,21 +71,10 @@
 		                         <span class="nav-link-text">Overview</span>
 					        </a><!--//nav-link-->
 					    </li><!--//nav-item-->
+					  
 					    <li class="nav-item">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link" href="docs.html">
-						        <span class="nav-icon">
-						        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-folder" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path d="M9.828 4a3 3 0 0 1-2.12-.879l-.83-.828A1 1 0 0 0 6.173 2H2.5a1 1 0 0 0-1 .981L1.546 4h-1L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3v1z"/>
-  <path fill-rule="evenodd" d="M13.81 4H2.19a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4zM2.19 3A2 2 0 0 0 .198 5.181l.637 7A2 2 0 0 0 2.826 14h10.348a2 2 0 0 0 1.991-1.819l.637-7A2 2 0 0 0 13.81 3H2.19z"/>
-</svg>
-						         </span>
-		                         <span class="nav-link-text">Inquiries</span>
-					        </a><!--//nav-link-->
-					    </li><!--//nav-item-->
-					    <li class="nav-item">
-					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link active" href="orders.html">
+					        <a class="nav-link" href="orders.html">
 						        <span class="nav-icon">
 						        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-card-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" d="M14.5 3h-13a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
@@ -116,7 +103,7 @@
 					    </li><!--//nav-item-->
 					    <li class="nav-item">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link" href="help.html">
+					        <a class="nav-link active" href="help.html">
 						        <span class="nav-icon">
 						        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-question-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
@@ -131,9 +118,9 @@
 			    <div class="app-sidepanel-footer">
 				    <nav class="app-nav app-nav-footer">
 					    <ul class="app-menu footer-menu list-unstyled">
-						  
-						   
+						    
 
+						   
 					    </ul><!--//footer-menu-->
 				    </nav>
 			    </div><!--//app-sidepanel-footer-->
@@ -142,118 +129,127 @@
     </header><!--//app-header-->
     
     <div class="app-wrapper">
-	    <div class="app-card app-card-accordion shadow-sm mb-4">
-			
-			<div class="app-card-body p-4 pt-0">
-				<div id="faq1-accordion" class="faq1-accordion faq-accordion accordion">
-					
-					<div class="accordion-item">
-						<h2 class="accordion-header" id="faq1-heading-1">
-						  <button class="accordion-button btn btn-link" type="button" data-bs-toggle="collapse"  data-bs-target="#faq1-1" aria-expanded="false" aria-controls="faq1-1">
-							ADD NEW DATA
-						  </button>
-						</h2>
-						<div id="faq1-1" class="accordion-collapse collapse border-0" aria-labelledby="faq1-heading-1">
-							<div class="accordion-body text-start p4">
-								<div class="medic-form">
-									<form>
-									  <input type="text" name="batchno" placeholder="Batc No..." />
-									  <input type="text" name="name" placeholder="Medicine Name..." />
-									  <input type="text" name="manufacture" placeholder="Manufacture Date..." />
-									  <input type="text" name="expiry" placeholder="Expiry Date..." />
-									  <button>Add Medicine</button>
-									  <p class="error"></p>
-									</form>
-								</div>
-								
-							</div>
-						</div>
-					</div><!--//accordion-item-->					  
-				</div><!--//faq1-accordion-->
-			</div><!--//app-card-body-->
-		</div><!--//app-card-->
+	    
 	    <div class="app-content pt-3 p-md-3 p-lg-4">
 		    <div class="container-xl">
 			    
-			    <div class="row g-3 mb-4 align-items-center justify-content-between">
-				    <div class="col-auto">
-			            <h1 class="app-page-title mb-0">Medical Database</h1>
-				    </div>
-				   
-			    </div><!--//row-->
-			   
+			    <h1 class="app-page-title">Help Center</h1>
+                <div class="app-card app-card-accordion shadow-sm mb-4">
+				    <div class="app-card-header p-4 pb-2  border-0">
+				       <h4 class="app-card-title">Product</h4>
+				    </div><!--//app-card-header-->
+				    <div class="app-card-body p-4 pt-0">
+					    <div id="faq1-accordion" class="faq1-accordion faq-accordion accordion">
+						    
+						    <div class="accordion-item">
+							    <h2 class="accordion-header" id="faq1-heading-1">
+							      <button class="accordion-button btn btn-link" type="button" data-bs-toggle="collapse"  data-bs-target="#faq1-1" aria-expanded="false" aria-controls="faq1-1">
+							        Can I viverra sit amet quam eget lacinia?
+							      </button>
+							    </h2>
+							    <div id="faq1-1" class="accordion-collapse collapse border-0" aria-labelledby="faq1-heading-1">
+							        <div class="accordion-body text-start p4">
+							            Anim pariatur cliche reprehenderit, enim eiusmod high life
+	                                    accusamus terry richardson ad squid. 3 wolf moon officia
+	                                    aute, non cupidatat skateboard dolor brunch. Food truck
+	                                    quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+	                                    sunt aliqua put a bird on it squid single-origin coffee
+	                                    nulla assumenda shoreditch et. Nihil anim keffiyeh
+	                                    helvetica, craft beer labore wes anderson cred nesciunt
+	                                    sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+	                                    Leggings occaecat craft beer farm-to-table, raw denim
+	                                    aesthetic synth nesciunt you probably haven't heard of them
+	                                    accusamus labore sustainable VHS.
+							        </div>
+							    </div>
+							</div><!--//accordion-item-->
+						    
+						 
+						    
+						    <div class="accordion-item">
+							    <h2 class="accordion-header" id="faq1-heading-3">
+							      <button class="accordion-button btn btn-link" type="button" data-bs-toggle="collapse"  data-bs-target="#faq1-3" aria-expanded="false" aria-controls="faq1-3">
+							        How to vegan excepteur butcher vice lomo?
+							      </button>
+							    </h2>
+							    <div id="faq1-3" class="accordion-collapse collapse border-0" aria-labelledby="faq1-heading-3">
+							        <div class="accordion-body text-start p4">
+							            Anim pariatur cliche reprehenderit, enim eiusmod high life
+	                                    accusamus terry richardson ad squid. 3 wolf moon officia
+	                                    aute, non cupidatat skateboard dolor brunch. Food truck
+	                                    quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+	                                    sunt aliqua put a bird on it squid single-origin coffee
+	                                    nulla assumenda shoreditch et. Nihil anim keffiyeh
+	                                    helvetica, craft beer labore wes anderson cred nesciunt
+	                                    sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+	                                    Leggings occaecat craft beer farm-to-table, raw denim
+	                                    aesthetic synth nesciunt you probably haven't heard of them
+	                                    accusamus labore sustainable VHS.
+							        </div>
+							    </div>
+							</div><!--//accordion-item-->
+							
+							
+							
+							<div class="accordion-item">
+							    <h2 class="accordion-header" id="faq1-heading-5">
+							      <button class="accordion-button btn btn-link" type="button" data-bs-toggle="collapse"  data-bs-target="#faq1-5" aria-expanded="false" aria-controls="faq1-5">
+							        What is the ipsum dolor sit amet quam tortor?
+							      </button>
+							    </h2>
+							    <div id="faq1-5" class="accordion-collapse collapse border-0" aria-labelledby="faq1-heading-5">
+							        <div class="accordion-body text-start p4">
+							            Anim pariatur cliche reprehenderit, enim eiusmod high life
+	                                    accusamus terry richardson ad squid. 3 wolf moon officia
+	                                    aute, non cupidatat skateboard dolor brunch. Food truck
+	                                    quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+	                                    sunt aliqua put a bird on it squid single-origin coffee
+	                                    nulla assumenda shoreditch et. Nihil anim keffiyeh
+	                                    helvetica, craft beer labore wes anderson cred nesciunt
+	                                    sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+	                                    Leggings occaecat craft beer farm-to-table, raw denim
+	                                    aesthetic synth nesciunt you probably haven't heard of them
+	                                    accusamus labore sustainable VHS.
+							        </div>
+							    </div>
+							</div><!--//accordion-item-->
+							
+							<div class="accordion-item">
+							    <h2 class="accordion-header" id="faq1-heading-6">
+							      <button class="accordion-button btn btn-link" type="button" data-bs-toggle="collapse"  data-bs-target="#faq1-6" aria-expanded="false" aria-controls="faq1-6">
+							        Can I viverra sit amet quam eget lacinia?
+							      </button>
+							    </h2>
+							    <div id="faq1-6" class="accordion-collapse collapse border-0" aria-labelledby="faq1-heading-6">
+							        <div class="accordion-body text-start p4">
+							            Anim pariatur cliche reprehenderit, enim eiusmod high life
+	                                   
+							        </div>
+							    </div>
+							</div><!--//accordion-item-->
+							                  
+	                    </div><!--//faq1-accordion-->
+				    </div><!--//app-card-body-->
+				</div><!--//app-card-->
 			    
-			    <nav id="orders-table-tab" class="orders-table-tab app-nav-tabs nav shadow-sm flex-column flex-sm-row mb-4">
-				    <a class="flex-sm-fill text-sm-center nav-link active" id="orders-all-tab" data-bs-toggle="tab" href="#orders-all" role="tab" aria-controls="orders-all" aria-selected="true">All</a>
 
-				</nav>
-			
-				<div class="tab-content" id="orders-table-tab-content">
-			        <div class="tab-pane fade show active" id="orders-all" role="tabpanel" aria-labelledby="orders-all-tab">
-					    <div class="app-card app-card-orders-table shadow-sm mb-5">
-						    <div class="app-card-body">
-							    <div class="table-responsive" id="app">
-							        <table class="table app-table-hover mb-0 text-left">
-										<thead>
-											<tr>
-												<th class="cell">Batch</th>
-												<th class="cell">Medicine</th>
-									
-												<th class="cell">Manufacture Date</th>
-												<th class="cell">Expiry Date</th>
-												<th class="cell">Status</th>
-												<th class="cell">Delete</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr v-for="report in reports">
-												
-												<td class="cell"><span class="truncate">{{ report.batchno }}</span></td>
-												<td class="cell"><span class="cell-data">{{ report.medname }}</span></td>
-												<td class="cell"><span class="cell-data">{{ report.mufdate }}</span></td>
-												<td class="cell"><span class="cell-data">{{ report.expdate }}</span></td>
-												<td class="cell"><span class="badge bg-success">Excellent</span></td>
-												<td class="cell"><a class="btn-sm app-btn-secondary" href="#">Delete</a></td>
-											</tr>
-		
-										</tbody>
-									</table>
-						        </div><!--//table-responsive-->
-						       
-						    </div><!--//app-card-body-->		
-						</div><!--//app-card-->
-						
-						
-			        </div><!--//tab-pane-->
-			        
-					
-		    
+
+
+
 		    </div><!--//container-fluid-->
 	    </div><!--//app-content-->
 	    
-	   
+	    
 	    
     </div><!--//app-wrapper-->    					
-	<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
  
     <!-- Javascript -->          
     <script src="../assets/plugins/popper.min.js"></script>
     <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
     
-    
     <!-- Page Specific JS -->
-	<script src="../assets/js/app.js"></script> 
-	
-	   <!-- update the version number as needed -->
-	   <script src="/__/firebase/7.7.0/firebase-app.js"></script>
-	   <!-- include only the Firebase features as you need -->
-	   <script src="/__/firebase/7.7.0/firebase-auth.js"></script>
-	   <script src="/__/firebase/7.7.0/firebase-firestore.js"></script>
-	   <script src="/__/firebase/7.7.0/firebase-functions.js"></script>
-	   <!-- initialize the SDK after all desired features are loaded -->
-	   <script src="/__/firebase/init.js"></script>
-
-	   <script src="./database.js"></script>
+    <script src="../assets/js/app.js"></script> 
 
 </body>
 </html> 

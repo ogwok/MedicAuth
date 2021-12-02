@@ -1,10 +1,9 @@
-const requestForm = document.querySelector(".medic-form form");
-const pharmForm = document.querySelector(".pharm-form form");
+const requestForm = document.querySelector(".old-request form");
+
 var app = new Vue({
     el: '#app',
     data: {
-      reports: [],
-      complaints: [],
+      reports: []
     },
     methods: {
       updateRecord(id){
@@ -24,7 +23,7 @@ var app = new Vue({
     },
     mounted(){
         const ref = firebase.firestore().collection('reports');
-        // ref = queryRef.where("medname", "==", "Panadol");
+
         ref.onSnapshot(snapshot => {
             let requests = [];
             snapshot.forEach(doc => {
@@ -33,54 +32,24 @@ var app = new Vue({
             this.reports = requests;
             console.log(requests);
         })
-
-        const refComplaints = firebase.firestore().collection('complaints');
-        refComplaints.onSnapshot(snapshot => {
-            let userComplaints = [];
-            snapshot.forEach(doc => {
-              userComplaints.push({...doc.data(), id: doc.id})
-            })
-            this.complaints = userComplaints;
-            console.log(userComplaints);
-        })
        
     }
   })
 
 
 
-// add a new drug to the database
+// add a new request
 requestForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  console.log("drug clicked");
-  const addRequest = firebase.functions().httpsCallable("addRequest");
-  
-  addRequest({
-    batch: requestForm.batchno.value,
-    name: requestForm.name.value,
-    mufdate: requestForm.manufacture.value,
-    expdate: requestForm.expiry.value,
-    
-  })
-    .then(() => {
-      requestForm.reset();
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-});
 
-// add a new pharmarcy to the database
-pharmForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  console.log("clicked!!");
   const addRequest = firebase.functions().httpsCallable("addRequest");
   
   addRequest({
-    name: pharmForm.name.value,
-    regno: pharmForm.regno.value,
-    
-    
+    name: requestForm.fname.value,
+    age: requestForm.age.value,
+    location: requestForm.location.value,
+    gender: requestForm.gender.value,
+    report: requestForm.report.value,
   })
     .then(() => {
       requestForm.reset();
