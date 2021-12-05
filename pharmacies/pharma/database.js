@@ -24,7 +24,7 @@ var app = new Vue({
     },
     mounted(){
         const queryRef = firebase.firestore().collection('reports');
-        ref = queryRef.where("permsission", "==", "pharmacies");
+        ref = queryRef.where("permsission", "==", firebase.auth().currentUser.email);
         ref.onSnapshot(snapshot => {
             let requests = [];
             snapshot.forEach(doc => {
@@ -58,6 +58,7 @@ requestForm.addEventListener("submit", (e) => {
     name: requestForm.name.value,
     mufdate: requestForm.manufacture.value,
     expdate: requestForm.expiry.value,
+    id: firebase.auth().currentUser.email,
     
   })
     .then(() => {

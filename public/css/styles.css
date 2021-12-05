@@ -54,6 +54,12 @@ header a:hover {
 .content-menu {
   display: none;
 }
+.content-complaints {
+  display: none;
+}
+.content-complaints.open {
+  display: block;
+}
 .content-menu.active {
   display: block;
 }

@@ -48,6 +48,9 @@ loginForm.addEventListener("submit", (e) => {
     .catch((error) => {
       loginForm.querySelector(".error").textContent = error.message;
     });
+
+  
+
 });
 
 // sign out
@@ -60,9 +63,27 @@ signOut.addEventListener("click", () => {
 
 // auth listener
 firebase.auth().onAuthStateChanged((user) => {
-  if (user) {
-      window.location = `${window.location}pharma/index.html`
+  if (user )  {
+    console.log("loggin successful");
+    const queryRef = firebase.firestore().collection('pharmacies');
+    // ref = queryRef.where("pharmaregno", "==", firebase.auth().currentUser.email);
+    ref = queryRef.where("email", "==", firebase.auth().currentUser.email);
+    ref.onSnapshot(snapshot => {
+        let requests = [];
+        snapshot.forEach(doc => {
+          requests.push({...doc.data(), id: doc.id})
+        })
+        if (requests.length > 0){
+          console.log("pharmacy regestered");
+          window.location = `${window.location}pharma/index.html`;
+        }else{
+          console.log("pharmacy not regestered");
+        }
+    })
+      // window.location = `${window.location}pharma/index.html`;
   } else {
     
   }
+
+ 
 });

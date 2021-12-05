@@ -35,7 +35,7 @@ exports.addRequest = functions.https.onCall((data, context) => {
     medname: data.name,
     mufdate: data.mufdate,
     expdate: data.expdate,
-    permsission: "admin",
+    id : "admin",
   });
 });
 
@@ -58,7 +58,7 @@ exports.addPharmDrug = functions.https.onCall((data, context) => {
     medname: data.name,
     mufdate: data.mufdate,
     expdate: data.expdate,
-    permsission: "pharmacies",
+    id: data.id,
     
   });
 });
@@ -84,6 +84,7 @@ exports.addComplaint = functions.https.onCall((data, context) => {
     phone: data.phone,
     medName: data.medName,
     details: data.details,
+    id: data.id,
   });
 });
 

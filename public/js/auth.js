@@ -48,6 +48,9 @@ loginForm.addEventListener("submit", (e) => {
     .catch((error) => {
       loginForm.querySelector(".error").textContent = error.message;
     });
+
+  
+  
 });
 
 // sign out
