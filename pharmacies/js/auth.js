@@ -38,16 +38,30 @@ loginForm.addEventListener("submit", (e) => {
   const email = loginForm.email.value;
   const password = loginForm.password.value;
 
-  firebase
-    .auth()
-    .signInWithEmailAndPassword(email, password)
-    .then((user) => {
-      console.log("logged in", user);
-      loginForm.reset();
-    })
-    .catch((error) => {
-      loginForm.querySelector(".error").textContent = error.message;
-    });
+  // firebase
+  //   .auth()
+  //   .signInWithEmailAndPassword(email, password)
+  //   .then((user) => {
+  //     console.log("logged in", user);
+  //     loginForm.reset();
+  //   })
+  //   .catch((error) => {
+  //     loginForm.querySelector(".error").textContent = error.message;
+  //   });
+  firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
+  .then(() => {
+    // Existing and future Auth states are now persisted in the current
+    // session only. Closing the window would clear any existing state even
+    // if a user forgets to sign out.
+    // ...
+    // New sign-in will be persisted with session persistence.
+    return firebase.auth().signInWithEmailAndPassword(email, password);
+  })
+  .catch((error) => {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+  });
 
   
 
@@ -63,6 +77,7 @@ signOut.addEventListener("click", () => {
 
 // auth listener
 firebase.auth().onAuthStateChanged((user) => {
+  
   if (user )  {
     console.log("loggin successful");
     const queryRef = firebase.firestore().collection('pharmacies');

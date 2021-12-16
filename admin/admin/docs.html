@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title>Inquires</title>
+    <title>Medic Admin</title>
     
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  
     <link rel="shortcut icon" href="favicon.ico"> 
     
     <!-- FontAwesome JS-->
@@ -30,25 +30,22 @@
 						    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg>
 					    </a>
 				    </div><!--//col-->
-		          
-		            
-		            
+		           
 		            <div class="app-utilities col-auto">
-			           
-			            
+			          
 			            <div class="app-utility-item app-user-dropdown dropdown">
 				            <a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><img src="../assets/images/user.png" alt="user profile"></a>
 				            <ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
 								
 								<li><a class="dropdown-item" href="login.html">Log Out</a></li>
 							</ul>
-			            </div><!--//app-user-dropdown-->  
+			            </div><!--//app-user-dropdown--> 
 		            </div><!--//app-utilities-->
 		        </div><!--//row-->
 	            </div><!--//app-header-content-->
 	        </div><!--//container-fluid-->
         </div><!--//app-header-inner-->
-        <div id="app-sidepanel" class="app-sidepanel sidepanel-hidden"> 
+        <div id="app-sidepanel" class="app-sidepanel"> 
 	        <div id="sidepanel-drop" class="sidepanel-drop"></div>
 	        <div class="sidepanel-inner d-flex flex-column">
 		        <a href="#" id="sidepanel-close" class="sidepanel-close d-xl-none">&times;</a>
@@ -56,11 +53,12 @@
 		            <a class="app-logo" href="index.html"><img class="logo-icon me-2" src="../assets/images/app-logo.svg" alt="logo"><span class="logo-text">PORTAL</span></a>
 	
 		        </div><!--//app-branding-->  
+		        
 			    <nav id="app-nav-main" class="app-nav app-nav-main flex-grow-1">
 				    <ul class="app-menu list-unstyled accordion" id="menu-accordion">
 					    <li class="nav-item">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link" href="index.html">
+					        <a class="nav-link active" href="index.html">
 						        <span class="nav-icon">
 						        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 		  <path fill-rule="evenodd" d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z"/>
@@ -79,7 +77,7 @@
   <path fill-rule="evenodd" d="M13.81 4H2.19a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4zM2.19 3A2 2 0 0 0 .198 5.181l.637 7A2 2 0 0 0 2.826 14h10.348a2 2 0 0 0 1.991-1.819l.637-7A2 2 0 0 0 13.81 3H2.19z"/>
 </svg>
 						         </span>
-		                         <span class="nav-link-text">Inquires</span>
+		                         <span class="nav-link-text">Inquiries</span>
 					        </a><!--//nav-link-->
 					    </li><!--//nav-item-->
 					    <li class="nav-item">
@@ -97,20 +95,8 @@
 		                         <span class="nav-link-text">Medical Database</span>
 					        </a><!--//nav-link-->
 					    </li><!--//nav-item-->
-					  
-
-					   
-					    <li class="nav-item">
-					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link" href="charts.html">
-						        <span class="nav-icon">
-						        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bar-chart-line" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-	  <path fill-rule="evenodd" d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2zm1 12h2V2h-2v12zm-3 0V7H7v7h2zm-5 0v-3H2v3h2z"/>
-	</svg>
-						         </span>
-		                         <span class="nav-link-text">Charts</span>
-					        </a><!--//nav-link-->
-					    </li><!--//nav-item-->
+				
+					    
 					    <li class="nav-item">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
 					        <a class="nav-link" href="help.html">
@@ -122,16 +108,30 @@
 						         </span>
 		                         <span class="nav-link-text">Help</span>
 					        </a><!--//nav-link-->
-					    </li><!--//nav-item-->
+					    </li><!--//nav-item-->					    
 				    </ul><!--//app-menu-->
 			    </nav><!--//app-nav-->
 			    <div class="app-sidepanel-footer">
 				    <nav class="app-nav app-nav-footer">
 					    <ul class="app-menu footer-menu list-unstyled">
+						    <li class="nav-item">
+						        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+						        <a class="nav-link" href="settings.html">
+							        <span class="nav-icon">
+							            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+	  <path fill-rule="evenodd" d="M8.837 1.626c-.246-.835-1.428-.835-1.674 0l-.094.319A1.873 1.873 0 0 1 4.377 3.06l-.292-.16c-.764-.415-1.6.42-1.184 1.185l.159.292a1.873 1.873 0 0 1-1.115 2.692l-.319.094c-.835.246-.835 1.428 0 1.674l.319.094a1.873 1.873 0 0 1 1.115 2.693l-.16.291c-.415.764.42 1.6 1.185 1.184l.292-.159a1.873 1.873 0 0 1 2.692 1.116l.094.318c.246.835 1.428.835 1.674 0l.094-.319a1.873 1.873 0 0 1 2.693-1.115l.291.16c.764.415 1.6-.42 1.184-1.185l-.159-.291a1.873 1.873 0 0 1 1.116-2.693l.318-.094c.835-.246.835-1.428 0-1.674l-.319-.094a1.873 1.873 0 0 1-1.115-2.692l.16-.292c.415-.764-.42-1.6-1.185-1.184l-.291.159A1.873 1.873 0 0 1 8.93 1.945l-.094-.319zm-2.633-.283c.527-1.79 3.065-1.79 3.592 0l.094.319a.873.873 0 0 0 1.255.52l.292-.16c1.64-.892 3.434.901 2.54 2.541l-.159.292a.873.873 0 0 0 .52 1.255l.319.094c1.79.527 1.79 3.065 0 3.592l-.319.094a.873.873 0 0 0-.52 1.255l.16.292c.893 1.64-.902 3.434-2.541 2.54l-.292-.159a.873.873 0 0 0-1.255.52l-.094.319c-.527 1.79-3.065 1.79-3.592 0l-.094-.319a.873.873 0 0 0-1.255-.52l-.292.16c-1.64.893-3.433-.902-2.54-2.541l.159-.292a.873.873 0 0 0-.52-1.255l-.319-.094c-1.79-.527-1.79-3.065 0-3.592l.319-.094a.873.873 0 0 0 .52-1.255l-.16-.292c-.892-1.64.902-3.433 2.541-2.54l.292.159a.873.873 0 0 0 1.255-.52l.094-.319z"/>
+	  <path fill-rule="evenodd" d="M8 5.754a2.246 2.246 0 1 0 0 4.492 2.246 2.246 0 0 0 0-4.492zM4.754 8a3.246 3.246 0 1 1 6.492 0 3.246 3.246 0 0 1-6.492 0z"/>
+	</svg>
+							        </span>
+			                        <span class="nav-link-text">Settings</span>
+						        </a><!--//nav-link-->
+						    </li><!--//nav-item-->
 						   
+
 					    </ul><!--//footer-menu-->
 				    </nav>
 			    </div><!--//app-sidepanel-footer-->
+		       
 	        </div><!--//sidepanel-inner-->
 	    </div><!--//app-sidepanel-->
     </header><!--//app-header-->
@@ -139,77 +139,90 @@
     <div class="app-wrapper">
 	    
 	    <div class="app-content pt-3 p-md-3 p-lg-4">
-		    <div class="container-xl">
-			    <div class="position-relative mb-3">
-				    <div class="row g-3 justify-content-between">
-					    <div class="col-auto">
-					        <h1 class="app-page-title mb-0">Notifications</h1>
-					    </div>
-					   
-				    </div>
-			    </div>
+		    <div class="container-xl" id="appp">
 			    
-               
-				
-				<div class="app-card app-card-notification shadow-sm mb-4" id="app" v-for="complaint in complaints">
-				    <div class="app-card-header px-4 py-3">
-				        <div class="row g-3 align-items-center">
-					        <div class="col-12 col-lg-auto text-center text-lg-start">						        
-				                <div class="app-icon-holder">
-									<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-receipt" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-	  <path fill-rule="evenodd" d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v12a.5.5 0 0 1-.053.224l-.5 1a.5.5 0 0 1-.8.13L13 14.707l-.646.647a.5.5 0 0 1-.708 0L11 14.707l-.646.647a.5.5 0 0 1-.708 0L9 14.707l-.646.647a.5.5 0 0 1-.708 0L7 14.707l-.646.647a.5.5 0 0 1-.708 0L5 14.707l-.646.647a.5.5 0 0 1-.708 0L3 14.707l-.646.647a.5.5 0 0 1-.801-.13l-.5-1A.5.5 0 0 1 1 14V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27zm.217 1.338L2 2.118v11.764l.137.274.51-.51a.5.5 0 0 1 .707 0l.646.647.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.509.509.137-.274V2.118l-.137-.274-.51.51a.5.5 0 0 1-.707 0L12 1.707l-.646.647a.5.5 0 0 1-.708 0L10 1.707l-.646.647a.5.5 0 0 1-.708 0L8 1.707l-.646.647a.5.5 0 0 1-.708 0L6 1.707l-.646.647a.5.5 0 0 1-.708 0L4 1.707l-.646.647a.5.5 0 0 1-.708 0l-.509-.51z"/>
-	  <path fill-rule="evenodd" d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm8-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z"/>
-	</svg>
-								</div><!--//app-icon-holder-->
-					        </div><!--//col-->
-					        <div class="col-12 col-lg-auto text-center text-lg-start">
-						        <div class="notification-type mb-2"><span class="badge bg-warning">Pending</span></div>
-						        <h4 class="notification-title mb-1">{{ complaint.fname }} | reporting conterfeit - {{ complaint.medName }} </h4>
-						        
-						        <ul class="notification-meta list-inline mb-0">
-							        <li class="list-inline-item">{{ complaint.location }}</li>
-							        <li class="list-inline-item">|</li>
-							        <li class="list-inline-item">{{ complaint.phone }}</li>
-						        </ul>
-						   
-					        </div><!--//col-->
-				        </div><!--//row-->
-				    </div><!--//app-card-header-->
-				    <div class="app-card-body p-4">
-					    <div class="notification-content">{{ complaint.details }}</div>
-				    </div><!--//app-card-body-->
-				    <div class="app-card-footer px-4 py-3">
-					    <a class="action-link" href="#">Change status<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right ms-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-</svg> resolved</a>
-				    </div><!--//app-card-footer-->
-				</div><!--//app-card-->
-	
+			    <h1 class="app-page-title">Overview</h1>
+			    
+				<!-- i will be the module right here -->
+				<div class="pharm-form">
+				<div class="app-card app-card-accordion shadow-sm mb-4">
+			
+					<div class="app-card-body p-4 pt-0">
+						<div id="faq1-accordion" class="faq1-accordion faq-accordion accordion">
+							
+							<div class="accordion-item">
+								<h2 class="accordion-header" id="faq1-heading-1">
+								  <button class="accordion-button btn btn-link" type="button" data-bs-toggle="collapse"  data-bs-target="#faq1-1" aria-expanded="false" aria-controls="faq1-1">
+									ADD PHARMARCY
+								  </button>
+								</h2>
+								<div id="faq1-1" class="accordion-collapse collapse border-0" aria-labelledby="faq1-heading-1">
+									<div class="accordion-body text-start p4">
+										<div>
+											<form>
+											  <input type="text" name="name" placeholder="Pharmarcy Name..." />
+											  <input type="text" name="regno" placeholder="Pharmarcy Reg.no..." /> 
+											  <button>Add Pharmarcy</button>
+											  <p class="error"></p>
+											</form>
+										</div>
+										
+									</div>
+								</div>
+							</div><!--//accordion-item-->					  
+						</div><!--//faq1-accordion-->
+					</div><!--//app-card-body-->
+				</div>
+		    </div><!--//app-card-->
+				    
+		</div>
+	</div>
+
+	<div class="card" style="padding-left: 20px;padding-right: 20px; margin-left: 30px;margin-right: 30px;" >
+		<h5 class="card-header">Featured</h5>
+		<div class="card-body">
+		  <h5 class="card-title" v-for="complaint in complaints">Special title treatment</h5>
+		  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+		  <a href="#" class="btn btn-primary">Go somewhere</a>
+		</div>
+	  </div>
+			   
+			  
+			   
+			    
 		    </div><!--//container-fluid-->
 	    </div><!--//app-content-->
-
+	    
+	   
+	    
     </div><!--//app-wrapper-->    					
 
-	<!-- Javascript -->   
+ 
+	<!-- Javascript -->    
 	
 	<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-	
+
+
     <script src="../assets/plugins/popper.min.js"></script>
     <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+
+    <!-- Charts JS -->
+    <script src="../assets/plugins/chart.js/chart.min.js"></script> 
+    <script src="../assets/js/index-charts.js"></script> 
     
     <!-- Page Specific JS -->
 	<script src="../assets/js/app.js"></script> 
 	
-		   <!-- update the version number as needed -->
-		   <script src="/__/firebase/7.7.0/firebase-app.js"></script>
-		   <!-- include only the Firebase features as you need -->
-		   <script src="/__/firebase/7.7.0/firebase-auth.js"></script>
-		   <script src="/__/firebase/7.7.0/firebase-firestore.js"></script>
-		   <script src="/__/firebase/7.7.0/firebase-functions.js"></script>
-		   <!-- initialize the SDK after all desired features are loaded -->
-		   <script src="/__/firebase/init.js"></script>
-	
-		   <script src="./database.js"></script>
+	  <!-- update the version number as needed -->
+	  <script src="/__/firebase/7.7.0/firebase-app.js"></script>
+	  <!-- include only the Firebase features as you need -->
+	  <script src="/__/firebase/7.7.0/firebase-auth.js"></script>
+	  <script src="/__/firebase/7.7.0/firebase-firestore.js"></script>
+	  <script src="/__/firebase/7.7.0/firebase-functions.js"></script>
+	  <!-- initialize the SDK after all desired features are loaded -->
+	  <script src="/__/firebase/init.js"></script>
+
+	  <script src="./complaint.js"></script>
 
 </body>
 </html> 

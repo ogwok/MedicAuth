@@ -24,8 +24,14 @@ var app = new Vue({
     },
     mounted(){
         const queryRef = firebase.firestore().collection('reports');
-        ref = queryRef.where("permsission", "==", firebase.auth().currentUser.email);
-        ref.onSnapshot(snapshot => {
+
+        function delay(time) {
+          return new Promise(resolve => setTimeout(resolve, time));
+        }
+        var details = delay(5000).then(() => (firebase.auth().currentUser.email));
+        details.then((val) => {
+          ref = queryRef.where("id", "==", val);
+          ref.onSnapshot(snapshot => {
             let requests = [];
             snapshot.forEach(doc => {
               requests.push({...doc.data(), id: doc.id})
@@ -33,6 +39,24 @@ var app = new Vue({
             this.reports = requests;
             console.log(requests);
         })
+        }
+        );
+
+        // ref = queryRef.where("permsission", "==", firebase.auth().currentUser.email);
+        // ref = queryRef.where("id", "==", "pharmacies");
+       
+        // function delay(time) {
+        //   return new Promise(resolve => setTimeout(resolve, time));
+        // }
+        // delay(5000).then(() => console.log(firebase.auth().currentUser.email));
+        // ref.onSnapshot(snapshot => {
+        //     let requests = [];
+        //     snapshot.forEach(doc => {
+        //       requests.push({...doc.data(), id: doc.id})
+        //     })
+        //     this.reports = requests;
+        //     console.log(requests);
+        // })
 
         const refComplaints = firebase.firestore().collection('complaints');
         refComplaints.onSnapshot(snapshot => {
@@ -68,8 +92,14 @@ requestForm.addEventListener("submit", (e) => {
       console.log(error);
     });
 });
+// add a new drug to the database
+requestForm.addEventListener("online", (e) => {
+  e.preventDefault();
+  console.log("hello am online");
+});
 
 
+// console.log(` user email is ${firebase.auth().currentUser.email}`); 
 
 // let html = ``;
 // requests.forEach(request => {
