@@ -30,7 +30,7 @@ exports.addRequest = functions.https.onCall((data, context) => {
         "Batch must be no more than 15 characters long"
     );
   } 
-  return admin.firestore().collection("reports").add({
+  return admin.firestore().collection("pharmarcydatabase").add({
     batchno: data.batch,
     medname: data.name,
     mufdate: data.mufdate,
@@ -53,7 +53,7 @@ exports.addPharmDrug = functions.https.onCall((data, context) => {
         "Batch must be no more than 15 characters long"
     );
   } 
-  return admin.firestore().collection("reports").add({
+  return admin.firestore().collection("pharmarcydatabase").add({
     batchno: data.batch,
     medname: data.name,
     mufdate: data.mufdate,
@@ -117,8 +117,8 @@ exports.updateRecord = functions.https.onCall((data, context) => {
         "only authenticated users can add requests"
     );
   }
-
-   const request = admin.firestore().collection('reports').doc(data.id);
+  
+   const request = admin.firestore().collection('pharmarcydatabase').doc(data.id);
   return request.update({  
     age:  admin.firestore.FieldValue.increment(1)
   })
@@ -134,7 +134,7 @@ exports.deleteRecord = functions.https.onCall((data, context) => {
     );
   }
 
-   const request = admin.firestore().collection('reports').doc(data.id);
+   const request = admin.firestore().collection('pharmarcydatabase').doc(data.id);
   return request.delete();
   
 })

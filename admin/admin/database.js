@@ -3,7 +3,7 @@ const pharmForm = document.querySelector(".pharm-form form");
 var app = new Vue({
     el: '#app',
     data: {
-      reports: [],
+      pharmarcydatabase: [],
       complaints: [],
     },
     methods: {
@@ -23,14 +23,14 @@ var app = new Vue({
        }
     },
     mounted(){
-        const ref = firebase.firestore().collection('reports');
+        const ref = firebase.firestore().collection('pharmarcydatabase');
         // ref = queryRef.where("medname", "==", "Panadol");
         ref.onSnapshot(snapshot => {
             let requests = [];
             snapshot.forEach(doc => {
               requests.push({...doc.data(), id: doc.id})
             })
-            this.reports = requests;
+            this.pharmarcydatabase = requests;
             console.log(requests);
         })
 

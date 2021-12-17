@@ -1,7 +1,7 @@
 const complaintForm = document.querySelector(".old-request form");
 const checklink = document.querySelector(".new-check form");
 // const formElem = document.querySelector(".new-check form")
-   
+
 
 checklink.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -20,13 +20,13 @@ checklink.addEventListener("formdata", (e) => {
   var app = new Vue({
     el: '#app-validate',
     data: {
-      reports: [],
+      pharmarcydatabase: [],
       message: "",
       
     },
     
     mounted(){
-        const queryRef = firebase.firestore().collection('reports');
+        const queryRef = firebase.firestore().collection('pharmarcydatabase');
         ref = queryRef.where("batchno", "==", finalValue);
         ref.onSnapshot(snapshot => {
             let requests = [];

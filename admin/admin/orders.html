@@ -193,14 +193,14 @@
 											</tr>
 										</thead>
 										<tbody>
-											<tr v-for="report in reports">
+											<tr v-for="report in pharmarcydatabase">
 												
 												<td class="cell"><span class="truncate">{{ report.batchno }}</span></td>
 												<td class="cell"><span class="cell-data">{{ report.medname }}</span></td>
 												<td class="cell"><span class="cell-data">{{ report.mufdate }}</span></td>
 												<td class="cell"><span class="cell-data">{{ report.expdate }}</span></td>
 												<td class="cell"><span class="badge bg-success">Excellent</span></td>
-												<td class="cell"><a class="btn-sm app-btn-secondary" v-on:click="deleRecord()" href="#">Delete</a></td>
+												<td class="cell"><a class="btn-sm app-btn-secondary" v-on:click="deleRecord(report.id)" href="#">Delete</a></td>
 											</tr>
 		
 										</tbody>

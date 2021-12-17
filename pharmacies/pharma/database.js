@@ -3,7 +3,7 @@ const requestForm = document.querySelector(".medic-form form");
 var app = new Vue({
     el: '#app',
     data: {
-      reports: [],
+      pharmarcydatabase: [],
       complaints: [],
     },
     methods: {
@@ -23,7 +23,7 @@ var app = new Vue({
        }
     },
     mounted(){
-        const queryRef = firebase.firestore().collection('reports');
+        const queryRef = firebase.firestore().collection('pharmarcydatabase');
 
         function delay(time) {
           return new Promise(resolve => setTimeout(resolve, time));
@@ -36,7 +36,7 @@ var app = new Vue({
             snapshot.forEach(doc => {
               requests.push({...doc.data(), id: doc.id})
             })
-            this.reports = requests;
+            this.pharmarcydatabase = requests;
             console.log(requests);
         })
         }
