@@ -55,6 +55,7 @@ pharmForm.addEventListener("submit", (e) => {
   addRequest({
     name: pharmForm.name.value,
     regno: pharmForm.regno.value,
+    email: pharmForm.email.value,
     
     
   })

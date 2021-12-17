@@ -105,6 +105,7 @@ exports.addPharma = functions.https.onCall((data, context) => {
   return admin.firestore().collection("pharmacies").add({
     pharmaname: data.name,
     pharmaregno: data.regno,
+    email: data.email
     
   });
 });
